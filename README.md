@@ -15,4 +15,8 @@ I have made a reddit account:
   username ama_helper
   password hackillinois maybe HACKILLINOIS
   
-  
+=====================================================================================================
+
+django account:
+username: superuser
+password: SuperUser
