@@ -20,4 +20,7 @@ def get_AMA_names(submissions):
 	
 		return finalnames
 
-
+while(True):
+	if int(time.strftime("%M")) % 10 == 0:
+		login()
+	time.sleep(60)

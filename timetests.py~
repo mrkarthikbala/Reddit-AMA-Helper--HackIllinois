@@ -1,0 +1,5 @@
+import time
+
+print type(time.strftime("%M"))
+if int(time.strftime("%M")) % 14 == 0:
+	print "hello"
