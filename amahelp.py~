@@ -2,7 +2,7 @@ import praw,time
 
 def login():
 		r = praw.Reddit(user_agent = 'something')
-		submissions = r.get_subreddit('IAMA').get_hot(limit =6 )
+		submissions = r.get_subreddit('IAMA').get_new(limit =30 )
 		J = get_AMA_names(submissions)
 		return J
 def get_AMA_names(submissions):

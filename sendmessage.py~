@@ -2,6 +2,7 @@ import smtplib, time
 from amahelp import *
 from users import *
 from emailChecker import *
+from datetime import datetime
 
 def setup():
         server = smtplib.SMTP()
@@ -27,22 +28,25 @@ def clear_file():
 def send_top_ama():
 	server = setup()
 	theusers = init_users()
-	print theusers.myusers[0].provider
 	submissions = login()
-	for x in submissions:
 	#	theusers.refresh()
-		for user in theusers.myusers:
-			if x.ups <= user.quality:
-				recipient = str(user.number) + str(user.provider)
-				#print recipient
-				server.sendmail("amahelper@gmail.com", recipient, str(x)) #AND LINK
+	for user in theusers.myusers:
+		recipient = str(user.number) + str(user.provider)
+		
+		for x in submissions:	
+			thattime = x.created
+			now = time.time() #11-13
+			t1 = str(thattime)
+			t2 = str(now)
+			if x.ups >= int(user.quality) and x.ups < 1000 and long(t2)-long(t1)< 10000	:
+				server.sendmail("amahelper@gmail.com", 					recipient, str(x)) #AND LINK
 	server.quit()
 
 def main():
 	clear_file()
 	while(True):
 		a = int(time.strftime("%M"))
-		if a <= 60:
+		if a < 60: #change for demo
 
 			send_top_ama()	
 		

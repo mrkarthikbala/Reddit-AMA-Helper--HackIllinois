@@ -19,7 +19,7 @@ class Users:
 		provider = info_string[info_string.find("|"):info_string.find("~")]
 		quality = info_string[info_string.find("~") :]
 
-		auser = User(number, provider, quality)
+		auser = User(number, provider, quality[1:])
 		self.myusers.append(auser)
 		return auser
 		
@@ -63,8 +63,11 @@ class User:
 		
 	def chooseprovider(self, aprovider): #LOOK INTO THIS
 		aprovider = aprovider[1:]
-		return "@tmomail.net"
-		if  "T Mobile" == aprovider:
+		if  "T Mob" in aprovider:
 			return "@tmomail.net"
-		if "AT&T" == aprovider:
+		elif "AT" in aprovider:
 			return "@txt.att.net"
+		elif "zon" in aprovider:
+			return "@vtext.com"
+		else:
+			return ""

@@ -1,8 +1,1 @@
-set up voice number
-
-handle insertion from email
-
-handle multiple insertions
-handle unsubscribe
-
-
+get roy's txt message on board

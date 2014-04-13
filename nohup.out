@@ -1,0 +1,12 @@
+  File "sendmessage.py", line 34
+    recipient = str(user.number) + str(user.provider)
+            ^
+IndentationError: expected an indented block
+  File "sendmessage.py", line 34
+    recipient = str(user.number) + str(user.provider)
+            ^
+IndentationError: expected an indented block
+  File "sendmessage.py", line 34
+    recipient = str(user.number) + str(user.provider)
+            ^
+IndentationError: expected an indented block
