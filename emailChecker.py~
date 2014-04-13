@@ -38,5 +38,6 @@ def parseEmailData(lista):
 	toReturn.append(theNewNum)
 	theString = lista[1]
 	theString = theString[:theString.find("\n")]
+	print theString
 	toReturn.append(theString)
 	return toReturn
