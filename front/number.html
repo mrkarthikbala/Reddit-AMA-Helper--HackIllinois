@@ -1,0 +1,26 @@
+<template name = 'number'>
+	<div class = 'container'>
+		<form class = 'form-inline' role = 'form'>
+			<div class = 'control group'>
+				<label class = 'control-label' for = 'number'>Number</label>
+				<div class = 'controls'>
+					<input name = 'number' type = 'text' value = '{{number}}' placeholder = 'Your Number'/>
+				</div>
+			</div>
+			<div class = 'control group'>
+				<label class = 'control-label' for = 'provider'>Provider</label>
+				<div class = 'controls'>
+					<input name = 'provider' type = 'radio' value = '{{tmobile}}'>Tmobile<br>
+					<input name = 'provider' type = 'radio' value = '{{att}}'>Att
+				</div>
+			</div>
+			<div class = 'control-group'>
+				<div class = 'controls'>
+					<input type = 'submit' value = 'Submit' class = 'btn btn-primary'/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id = 'result'>
+	</div>
+</template>
