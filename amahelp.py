@@ -2,7 +2,7 @@ import praw,time
 
 def login():
 		r = praw.Reddit(user_agent = 'something')
-		submissions = r.get_subreddit('IAMA').get_new(limit =2 )
+		submissions = r.get_subreddit('IAMA').get_new(limit =3 )
 		J = get_AMA_names(submissions)
 		return J
 def get_AMA_names(submissions):
@@ -20,7 +20,4 @@ def get_AMA_names(submissions):
 	
 		return finalnames
 
-while(True):
-	if int(time.strftime("%M")) % 10 == 0:
-		login()
-	time.sleep(60)
+
